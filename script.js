@@ -527,92 +527,90 @@ function createBookSection(
    각 상세페이지에 책 지면 삽입
 ========================================= */
 
+/* =========================================
+각 상세페이지에 책 지면 삽입
+
+순서
+상세내용
+→ 활동 정보
+→ 실제 책자
+→ 돌아가기
+========================================= */
+
 function insertBookSections() {
 
   Object.keys(bookPages)
-    .forEach(function(activityId) {
+  .forEach(function(activityId) {
+
+    const activityPage =
+      document.getElementById(activityId);
 
 
-      const activityPage =
-        document.getElementById(activityId);
+    if (!activityPage) {
+      return;
+    }
 
 
-      if (!activityPage) {
-
-        return;
-
-      }
-
-
-      /* 이미 삽입되어 있으면 중복 생성 방지 */
-      if (
-        activityPage.querySelector(
-          ".book-page-section"
-        )
-      ) {
-
-        return;
-
-      }
+    if (
+      activityPage.querySelector(
+        ".book-page-section"
+      )
+    ) {
+      return;
+    }
 
 
-      const files =
-        bookPages[activityId];
+    const files =
+      bookPages[activityId];
 
 
-      const bookSection =
-        createBookSection(
-          activityId,
-          files
-        );
+    const bookSection =
+      createBookSection(
+        activityId,
+        files
+      );
 
 
 
-      /* =====================================
-         활동 정보가 있는 상세페이지
-         활동정보 바로 위에 책 페이지 삽입
-      ===================================== */
+    /* =====================================
+       활동 정보가 있는 상세페이지
+    ====================================== */
 
-      const activityInfo =
-        activityPage.querySelector(
-          ".activity-info"
-        );
-
-
-      if (activityInfo) {
-
-        activityPage.insertBefore(
-          bookSection,
-          activityInfo
-        );
-
-        return;
-
-      }
+    const activityInfo =
+      activityPage.querySelector(
+        ".activity-info"
+      );
 
 
+    if (activityInfo) {
 
-      /* =====================================
-         짧은 상세페이지
-      ===================================== */
+      /* 활동정보 안에 있는
+         돌아가기 버튼을 먼저 분리 */
 
       const backButton =
-        activityPage.querySelector(
+        activityInfo.querySelector(
           ".back-button"
         );
 
 
       if (backButton) {
-
         backButton.remove();
-
       }
 
 
-      activityPage.appendChild(
+
+      /* 활동 정보 바로 다음에
+         책자 지면 삽입 */
+
+      activityInfo.insertAdjacentElement(
+        "afterend",
         bookSection
       );
 
+
+
+      /* 책자 다음에
+         돌아가기 버튼 배치 */
 
       if (backButton) {
 
@@ -629,13 +627,62 @@ function insertBookSections() {
         );
 
 
-        activityPage.appendChild(
+        bookSection.insertAdjacentElement(
+          "afterend",
           backWrap
         );
 
       }
 
-    });
+
+      return;
+
+    }
+
+
+
+    /* =====================================
+       활동 정보가 없는 짧은 상세페이지
+    ====================================== */
+
+    const backButton =
+      activityPage.querySelector(
+        ".back-button"
+      );
+
+
+    if (backButton) {
+      backButton.remove();
+    }
+
+
+    activityPage.appendChild(
+      bookSection
+    );
+
+
+    if (backButton) {
+
+      const backWrap =
+        document.createElement("div");
+
+
+      backWrap.className =
+        "book-back-wrap";
+
+
+      backWrap.appendChild(
+        backButton
+      );
+
+
+      activityPage.appendChild(
+        backWrap
+      );
+
+    }
+
+  });
 
 }
 
