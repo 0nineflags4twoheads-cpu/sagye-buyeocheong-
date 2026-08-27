@@ -709,8 +709,8 @@
   <div class="spring-outro-inner">
 
 
-    <!-- 왼쪽 : 실제 책 아웃트로 -->
-    <div class="spring-outro-page outro-mobile-photo">
+    <!-- PC용 : 왼쪽 책자 사진 -->
+    <div class="spring-outro-page">
 
       <img
         src="images/spring-outro.jpg"
@@ -719,7 +719,7 @@
     </div>
 
 
-    <!-- 오른쪽 : OUTRO -->
+    <!-- 오른쪽 : OUTRO 내용 -->
     <div class="spring-outro-content">
 
       <p class="section-label">
@@ -732,7 +732,7 @@
       </h2>
 
 
-      <div class="spring-outro-text outro-mobile-text">
+      <div class="spring-outro-text">
 
         <p class="outro-lead">
           봄에는 언제나 시작이라는 설렘이 가득한<br>
@@ -778,25 +778,27 @@
       </div>
 
 
-<!-- 책자 사진 -->
-<div class="spring-outro-image">
+      <!-- 모바일에서만 보여지는 책자 사진 -->
+      <div class="spring-outro-mobile-image">
 
-  <img
-    src="images/spring-outro.jpg"
-    alt="사계 부여청 봄 아웃트로">
+        <img
+          src="images/spring-outro.jpg"
+          alt="사계 부여청 봄편 아웃트로">
 
-</div>
+      </div>
 
 
-<!-- 여름편 이동 -->
-<button
-  class="기존버튼클래스"
-  onclick="goPage('summer')">
+      <!-- 여름편 이동 -->
+      <button
+        class="back-button spring-summer-button"
+        onclick="goPage('summer')">
 
-  여름편 보러가기 →
+        여름편 보러가기 →
 
-</button>
+      </button>
 
+
+    </div>
 
   </div>
 
