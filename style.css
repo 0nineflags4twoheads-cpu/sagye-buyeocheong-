@@ -13712,3 +13712,33 @@ body[data-season="home"] .future-section > * {
   }
 
 }
+
+/* 기본적으로 숨김 */
+.mobile-pc-notice {
+  display: none;
+}
+
+
+/* 모바일에서만 표시 */
+@media (max-width: 768px) {
+
+  .mobile-pc-notice {
+    display: block;
+
+    margin:
+      22px 0
+      16px;
+
+    text-align: right;
+
+    color: rgba(65, 62, 56, .55);
+
+    font-size: 9px !important;
+    font-weight: 500;
+
+    line-height: 1.5 !important;
+
+    letter-spacing: -.1px;
+  }
+
+}
