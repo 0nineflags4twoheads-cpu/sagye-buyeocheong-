@@ -13845,3 +13845,63 @@ body[data-season="home"] .future-section > * {
   }
 
 }
+
+/* =========================================================
+   SPRING OUTRO
+   PC / MOBILE 이미지 순서 분리
+========================================================= */
+
+/* PC에서는 모바일용 사진 숨김 */
+.spring-outro-mobile-image {
+  display: none;
+}
+
+
+/* 여름편 버튼 */
+.spring-summer-button {
+  margin-top: 32px;
+}
+
+
+@media (max-width: 768px) {
+
+  /* 모바일에서는 왼쪽에 있던 PC용 사진 숨김 */
+  .spring-outro-page {
+    display: none !important;
+  }
+
+
+  /* 글 다음에 들어가는 사진 표시 */
+  .spring-outro-mobile-image {
+    display: block;
+
+    width: 100%;
+    max-width: 420px;
+
+    margin:
+      38px auto
+      0;
+  }
+
+
+  .spring-outro-mobile-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* 사진 다음에 여름편 버튼 */
+  .spring-summer-button {
+    display: block;
+
+    margin:
+      24px auto
+      0;
+
+    color: #333 !important;
+    -webkit-text-fill-color: #333 !important;
+  }
+
+}
