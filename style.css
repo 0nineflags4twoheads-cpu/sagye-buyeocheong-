@@ -12956,7 +12956,6 @@ body[data-season="home"] .future-section > * {
 
 }
 
-
 /* =========================================================
    MOBILE OPTIMIZATION
    사계 부여청 모바일 전용
@@ -13713,32 +13712,85 @@ body[data-season="home"] .future-section > * {
 
 }
 
-/* 기본적으로 숨김 */
-.mobile-pc-notice {
-  display: none;
+/* =========================
+   모바일 메인 화면 여백 정리
+========================= */
+@media (max-width: 768px) {
+  /* 상단 헤더 전체 */
+  .site-header,
+  .header,
+  .top-header {
+    padding-bottom: 10px !important;
+  }
+
+  /* HOME ~ 2025 메뉴 영역 */
+  .main-nav,
+  .global-nav,
+  .season-nav {
+    margin-bottom: 10px !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* 메인 히어로 섹션 */
+  .home-hero,
+  .hero,
+  .main-hero {
+    padding-top: 28px !important;
+    padding-bottom: 40px !important;
+    min-height: auto !important;
+  }
+
+  /* BUCHEON WOMEN & YOUTH CENTER */
+  .hero-kicker,
+  .hero-subtitle,
+  .hero-eyebrow {
+    margin-bottom: 14px !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  /* 메인 제목 */
+  .hero-title,
+  .main-title {
+    margin-bottom: 18px !important;
+    line-height: 1.08 !important;
+  }
+
+  /* 제목 아래 설명문 */
+  .hero-desc,
+  .hero-text,
+  .main-desc {
+    margin-bottom: 28px !important;
+    line-height: 1.7 !important;
+  }
 }
 
+/* =========================================================
+   SPRING OUTRO
+   모바일에서 글 → 사진 순서
+========================================================= */
 
-/* 모바일에서만 표시 */
 @media (max-width: 768px) {
 
-  .mobile-pc-notice {
-    display: block;
+  .outro-mobile-order {
+    display: flex !important;
+    flex-direction: column !important;
 
-    margin:
-      22px 0
-      16px;
+    width: 100%;
+  }
 
-    text-align: right;
 
-    color: rgba(65, 62, 56, .55);
+  /* 글 먼저 */
+  .outro-mobile-text {
+    order: 1 !important;
+  }
 
-    font-size: 9px !important;
-    font-weight: 500;
 
-    line-height: 1.5 !important;
+  /* 사진 나중 */
+  .outro-mobile-photo {
+    order: 2 !important;
 
-    letter-spacing: -.1px;
+    margin-top: 35px !important;
   }
 
 }
