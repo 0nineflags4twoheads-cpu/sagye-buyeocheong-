@@ -13604,3 +13604,111 @@ body[data-season="home"] .future-section > * {
   }
 
 }
+
+/* =========================================================
+   MOBILE FINAL FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -----------------------------------------
+     01. 모바일 버튼 파란 글씨 제거
+  ----------------------------------------- */
+
+  .logo,
+  .back-button,
+  .main-button {
+
+    -webkit-appearance: none !important;
+    appearance: none !important;
+
+    color: #2f2d29 !important;
+    -webkit-text-fill-color: #2f2d29 !important;
+
+    text-decoration: none !important;
+
+    font-family:
+      Georgia,
+      "Noto Sans KR",
+      "Apple SD Gothic Neo",
+      "Malgun Gothic",
+      sans-serif;
+  }
+
+
+  /* 사계 부여청 로고는 기존 Georgia 유지 */
+
+  .logo {
+    color: #2f2d29 !important;
+    -webkit-text-fill-color: #2f2d29 !important;
+
+    font-family: Georgia, serif !important;
+  }
+
+
+  /* 돌아가기 버튼 */
+
+  .back-button,
+  .main-button {
+    color: #333 !important;
+    -webkit-text-fill-color: #333 !important;
+  }
+
+
+  /* 눌렀을 때도 파란색 방지 */
+
+  .logo:visited,
+  .logo:active,
+  .logo:focus,
+  .back-button:visited,
+  .back-button:active,
+  .back-button:focus,
+  .main-button:visited,
+  .main-button:active,
+  .main-button:focus {
+
+    color: #333 !important;
+    -webkit-text-fill-color: #333 !important;
+  }
+
+
+  /* -----------------------------------------
+     02. 계절 메인 제목
+     HOME 메인 제목과 같은 크기
+  ----------------------------------------- */
+
+  .season-cover-content h1 {
+
+    font-size:
+      clamp(
+        55px,
+        13vw,
+        85px
+      ) !important;
+
+    line-height: 1.06 !important;
+
+    letter-spacing: -4px !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .spring-outro-inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* 글 먼저 */
+  .spring-outro-content {
+    order: 1 !important;
+  }
+
+  /* 책자 사진 나중 */
+  .spring-outro-image {
+    order: 2 !important;
+
+    margin-top: 35px;
+  }
+
+}
