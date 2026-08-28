@@ -13952,7 +13952,11 @@ body[data-season="home"] .future-section > * {
     color: #262521 !important;
     -webkit-text-fill-color: #262521 !important;
 
-    font-family: Georgia, serif !important;
+    font-family:
+  "Noto Serif KR",
+  "AppleMyungjo",
+  "Batang",
+  serif !important;
 
     font-size: 22px !important;
     font-weight: 700 !important;
