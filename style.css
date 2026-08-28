@@ -14014,3 +14014,19 @@ body[data-season="home"] .future-section > * {
   }
 
 }
+
+/* =========================================
+   四季 부여청 로고 폰트
+========================================= */
+
+.logo {
+  font-family:
+    "Noto Serif KR",
+    "AppleMyungjo",
+    "Batang",
+    serif !important;
+
+  font-weight: 700 !important;
+
+  letter-spacing: -0.7px;
+}
