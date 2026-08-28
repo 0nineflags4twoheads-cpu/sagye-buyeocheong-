@@ -13905,3 +13905,112 @@ body[data-season="home"] .future-section > * {
   }
 
 }
+
+/* =========================================================
+   MOBILE HEADER
+   매거진형 중앙 정렬
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    height: auto !important;
+
+    padding:
+      17px 18px
+      0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: rgba(244, 239, 230, .97);
+
+    border-bottom:
+      1px solid rgba(50, 48, 43, .16);
+  }
+
+
+  /* 四季 부여청 */
+  .header .logo {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0 15px !important;
+
+    padding: 0 !important;
+
+    color: #262521 !important;
+    -webkit-text-fill-color: #262521 !important;
+
+    font-family: Georgia, serif !important;
+
+    font-size: 22px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: -.4px;
+
+    text-align: center;
+  }
+
+
+  /* HOME ~ 2025 */
+  .header nav {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(6, minmax(0, 1fr));
+
+    gap: 0 !important;
+
+    margin: 0 !important;
+
+    padding:
+      0 !important;
+
+    border-top:
+      1px solid rgba(50, 48, 43, .12);
+  }
+
+
+  .header nav button {
+    width: 100%;
+
+    padding:
+      13px 0
+      14px !important;
+
+    border: 0 !important;
+
+    background: transparent !important;
+
+    color: #36342f !important;
+    -webkit-text-fill-color: #36342f !important;
+
+    font-size: 10px !important;
+    font-weight: 700 !important;
+
+    line-height: 1;
+
+    letter-spacing: .7px !important;
+
+    text-align: center !important;
+
+    white-space: nowrap;
+  }
+
+
+  /* 눌렀을 때 아주 살짝 */
+  .header nav button:active {
+    background:
+      rgba(85, 114, 67, .07) !important;
+  }
+
+}
